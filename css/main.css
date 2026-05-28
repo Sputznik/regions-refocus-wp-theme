@@ -383,6 +383,42 @@ body:not(.home) #site > main {
   color: #fdb500;
 }
 
+/* BACK TO TOP */
+.scroll-top {
+  z-index: 99;
+  width: 45px;
+  height: 45px;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  overflow: hidden;
+}
+
+.scroll-top .back-to-top {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #fdb500;
+  transform: translateY(150%);
+  transition: all .3s ease-in-out;
+}
+
+.scroll-top .back-to-top svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.scroll-top.show { opacity: 1; }
+
+.scroll-top.show .back-to-top {
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  opacity: 0.8;
+  transition: all .3s ease-in-out;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(max-width: 768px) {
   /* NAVIGATION */
