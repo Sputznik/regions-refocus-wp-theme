@@ -9,4 +9,5 @@
 <body <?php body_class();?>>
   <div id="site">
     <!-- Content Section -->
+    <?php get_template_part('partials/desktop-header'); ?>
     <main>
