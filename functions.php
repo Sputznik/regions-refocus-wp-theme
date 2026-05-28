@@ -17,7 +17,8 @@ if( !defined( 'RGNRFS_THEME_VERSION' ) ){
 $inc_files = array(
   'lib/class-rgnrfs-theme.php',
   'lib/wp-bootstrap-navwalker.php',
-  'lib/rgnrfs-hooks/rgnrfs-action-hooks.php'
+  'lib/rgnrfs-hooks/rgnrfs-action-hooks.php',
+  'lib/class-rgnrfs-convenings-cpt.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }
