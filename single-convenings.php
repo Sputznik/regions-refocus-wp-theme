@@ -17,6 +17,7 @@ get_header();
       </div>
       <div class="col-right"></div>
     </div>
+    <?php get_template_part('partials/convenings/related-convenings'); ?>
   <?php endwhile; endif; ?>
 </div>
 <?php get_footer(); ?>

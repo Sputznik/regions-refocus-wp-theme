@@ -430,6 +430,17 @@ body:not(.home) #site > main {
   font-size: 21px;
 }
 
+/* RELATED CONVENINGS */
+.related-convenings {
+  margin: 100px 0;
+}
+
+.related-convenings .related-convenings-title {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
 /* BACK TO TOP */
 .scroll-top {
   z-index: 99;
