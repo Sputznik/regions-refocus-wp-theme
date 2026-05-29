@@ -218,6 +218,11 @@ hr {
   border-left: 4px solid transparent;
 }
 
+.layout-wrap .col-left,
+.layout-wrap .col-right {
+  width: 100%;
+}
+
 .rgnrfs-link-color a {
   color: #2d7990;
   -webkit-transition: .05s ease-in-out;
@@ -395,6 +400,36 @@ body:not(.home) #site > main {
   color: #fdb500;
 }
 
+/* SINGLE CONVENINGS */
+.rgnrfs-single-convening {
+  margin-top: 120px;
+}
+
+.rgnrfs-single-convening .bg-top-terrain {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+}
+
+.convenings-post-header {
+  margin-bottom: 20px;
+}
+
+/* CONVENINGS BREADCRUMB */
+.convenings-post-header .breadcrumb {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.convenings-post-header .date-location {
+  font-size: 21px;
+}
+
 /* BACK TO TOP */
 .scroll-top {
   z-index: 99;
@@ -471,6 +506,31 @@ body:not(.home) #site > main {
 }
 
 /* -------------------------- MEDIA QUERIES ------------------------- */
+@media(min-width: 769px){
+  .layout-wrap {
+    display: flex;
+    gap: 50px;
+  }
+
+  .layout-wrap .col-left {
+    max-width: 66.66667%;
+  }
+
+  .layout-wrap .col-right {
+    max-width: 33.33333%
+  }
+
+  /* SINGLE CONVENINGS */
+  .rgnrfs-single-convening {
+    margin-top: 180px;
+  }
+
+  .convenings-post-header .date-location {
+    align-self: flex-end;
+  }
+
+}
+
 @media(max-width: 768px) {
   /* NAVIGATION */
   #rgnrfs-navigation #desktop-header {
