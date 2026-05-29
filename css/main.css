@@ -218,6 +218,18 @@ hr {
   border-left: 4px solid transparent;
 }
 
+.rgnrfs-link-color a {
+  color: #2d7990;
+  -webkit-transition: .05s ease-in-out;
+  -o-transition: .05s ease-in-out;
+  transition: .05s ease-in-out;
+}
+
+.rgnrfs-link-color a:hover {
+  color: #fdb500 !important;
+  text-decoration: none;
+}
+
 /* PRIMARY MENU */
 #site .rgnrfs-site-header {
   position: fixed;
@@ -417,6 +429,45 @@ body:not(.home) #site > main {
 .scroll-top:hover {
   opacity: 0.8;
   transition: all .3s ease-in-out;
+}
+
+/* ORBIT GRID 3 */
+.articles-grid3 {
+	grid-gap: 30px;
+}
+
+.articles-grid3 .orbit-article-db {
+	border-radius: 4px;
+	border-color: #dddddd;
+	background-color: #f7f7f7;
+}
+
+.articles-grid3 .orbit-thumbnail-bg {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.articles-grid3 .post-content {
+	padding: 20px;
+}
+
+.articles-grid3 .post-title a {
+	color: #1a1a1a;
+	font-weight: 900;
+}
+
+.articles-grid3 .post-title a:hover {
+	color: inherit;
+}
+
+.articles-grid3 .post-date {
+	color: #858585;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.articles-grid3 .tax-regions-list {
+	font-size: 12px;
 }
 
 /* -------------------------- MEDIA QUERIES ------------------------- */
