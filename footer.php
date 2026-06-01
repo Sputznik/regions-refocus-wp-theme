@@ -10,6 +10,7 @@
         </button>
       </div>
     </footer>
+    <?php get_template_part('partials/search-form-modal'); ?>
   </div> <!-- end of #site  -->
 <?php wp_footer(); ?>
 </body>

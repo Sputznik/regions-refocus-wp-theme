@@ -152,4 +152,21 @@ jQuery(document).ready(function(){
 
   });
 
+  /* SHOW SEARCH MODAL */
+  jQuery('.nav-search').on( 'click', function( e ){
+    e.preventDefault();
+    jQuery('#search-modal').show()
+    jQuery('.search-field input.search-input').focus();
+  });
+
+  /* CLOSE SEARCHMODAL */
+  jQuery('[data-dismiss~=rgnrfs-modal]').on( 'click', function(e){
+    jQuery('.rgnrfs-modal').hide();
+  });
+
+  /* CLOSE SEARCH MODAL WHEN Esc key is pressed */
+  jQuery(document).on('keydown',function(e) {
+    if( e.keyCode == 27){ jQuery('.rgnrfs-modal').hide(); }
+  });
+
 });
