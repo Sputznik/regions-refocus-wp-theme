@@ -150,7 +150,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= isset( $args->link_before ) ? $args->link_before : '';
 				$item_output .= apply_filters( 'the_title', $item->title, $item->ID );
 				$item_output .= isset( $args->link_after ) ? $args->link_after: '';
-				$item_output .= ( isset( $args->has_children ) && $args->has_children && ( 0 === $depth || 1 === $depth ) ) ? ' <span class="caret"></span></a>' : '</a>';
+				$item_output .= ( isset( $args->has_children ) && $args->has_children && ( 0 === $depth || 1 === $depth ) ) ? ' <span class="caret"></span><span class="rgnrfs-menu-toggler"><i class="fa-solid fa-angle-down"></i></span></a>' : '</a>';
 				$item_output .= isset( $args->after ) ? $args->after : '';
 				$output      .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 			} // End if().
