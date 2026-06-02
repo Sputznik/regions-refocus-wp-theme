@@ -24,7 +24,6 @@ class RGNRFS_CONVENINGS_CPT {
         'singular_name' => 'Convening'
       ),
       'public'		   => true,
-      'show_in_rest' => true,
       'menu_icon' 	 => 'dashicons-admin-post',
       'supports'	   => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' )
     );
