@@ -2,8 +2,8 @@
 /**
  * The template for displaying single-convenings header
 */
-$convening_date_range  = "27 May - 30 May, 2024";
-$convening_location    = "Antigua, Antigua and Barbuda"
+$convening_date_range  = get_post_meta( $post->ID, "rgnrfs_date_range", true );
+$convening_location    = get_post_meta( $post->ID, "rgnrfs_location", true );
 ?>
 <div class="convenings-post-header">
   <?php get_template_part('partials/convenings/breadcrumb'); ?>
