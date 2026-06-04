@@ -7,6 +7,9 @@ class RGNRFS_OUTCOMES_CPT {
     /* REGISTER CPT USING ORBIT-BUNDLE PLUGIN */
     add_filter( 'orbit_post_type_vars', array( $this, 'register_cpt' ) );
 
+    /* REGISTER CUSTOM META-FIELDS USING ORBIT-BUNDLE PLUGIN */
+    add_filter( 'orbit_meta_box_vars', array( $this, 'register_meta_fields' ) );
+
   }
 
   function register_cpt( $post_types ){
@@ -25,6 +28,32 @@ class RGNRFS_OUTCOMES_CPT {
 
     return $post_types;
 
+  }
+
+  function register_meta_fields( $meta_box ){
+    $meta_box['outcomes'] = array(
+      array(
+        'id'			=> 'rgnrfs-outcome-metafields',
+        'title'		=> 'Additional Information',
+        'fields'	=> array(
+          'rgnrfs_resource_url'	=> array(
+            'type' => 'text',
+            'text' => 'Resource URL'
+          ),
+          'rgnrfs_resource_type'	=> array(
+            'type' => 'dropdown',
+            'text' => 'Resource Type',
+            'options' => array(
+              'video' => 'Video',
+              'weblink' => 'Weblink',
+              'document' => 'Document'
+            )
+          )
+        )
+      )
+    );
+
+    return $meta_box;
   }
 
 }
