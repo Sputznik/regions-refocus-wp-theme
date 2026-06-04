@@ -11,14 +11,14 @@ class RGNRFS_TAXONOMY {
     $taxonomies['regions']	= array(
       'label'			    => 'Regions',
       'slug' 			    => 'regions',
-      'post_types'	  => array( 'convenings' ),
+      'post_types'	  => array( 'convenings', 'outcomes' ),
       'show_in_rest'	=> true
     );
 
     $taxonomies['initiatives']	= array(
       'label'			    => 'Initiatives',
       'slug' 			    => 'initiatives',
-      'post_types'	  => array( 'convenings' ),
+      'post_types'	  => array( 'convenings', 'outcomes' ),
       'show_in_rest'	=> true
     );
 

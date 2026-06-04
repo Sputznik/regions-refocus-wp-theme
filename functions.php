@@ -19,6 +19,7 @@ $inc_files = array(
   'lib/wp-bootstrap-navwalker.php',
   'lib/rgnrfs-hooks/rgnrfs-action-hooks.php',
   'lib/class-rgnrfs-convenings-cpt.php',
+  'lib/class-rgnrfs-outcomes-cpt.php',
   'lib/class-rgnrfs-taxonomy.php'
 );
 
