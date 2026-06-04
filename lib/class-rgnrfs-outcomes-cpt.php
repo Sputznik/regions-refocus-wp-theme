@@ -6,6 +6,7 @@ class RGNRFS_OUTCOMES_CPT {
 
     /* REGISTER CPT USING ORBIT-BUNDLE PLUGIN */
     add_filter( 'orbit_post_type_vars', array( $this, 'register_cpt' ) );
+
   }
 
   function register_cpt( $post_types ){
@@ -16,6 +17,7 @@ class RGNRFS_OUTCOMES_CPT {
         'name' => 'Outcomes',
         'singular_name' => 'Outcome'
       ),
+      'taxonomies'   => array( 'category' ),
       'public'		   => true,
       'menu_icon' 	 => 'dashicons-admin-post',
       'supports'	   => array( 'title', 'editor', 'excerpt', 'author' )

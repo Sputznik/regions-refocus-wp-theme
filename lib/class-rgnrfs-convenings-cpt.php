@@ -20,6 +20,7 @@ class RGNRFS_CONVENINGS_CPT {
         'name' => 'Convenings',
         'singular_name' => 'Convening'
       ),
+      'taxonomies'   => array( 'category' ),
       'public'		   => true,
       'menu_icon' 	 => 'dashicons-admin-post',
       'supports'	   => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' )
