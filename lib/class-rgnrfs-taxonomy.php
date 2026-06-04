@@ -15,6 +15,13 @@ class RGNRFS_TAXONOMY {
       'show_in_rest'	=> true
     );
 
+    $taxonomies['initiatives']	= array(
+      'label'			    => 'Initiatives',
+      'slug' 			    => 'initiatives',
+      'post_types'	  => array( 'convenings' ),
+      'show_in_rest'	=> true
+    );
+
     return $taxonomies;
   }
 
