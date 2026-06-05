@@ -695,7 +695,9 @@ body:not(.home) #site > main {
 }
 
 /* SOW RR ALLIES */
-.rr-allies .rr-ally-name {
+.rr-allies .rr-ally-name,
+.rr-outcomes.rr-outcomes-list .rr-outcome-title,
+.rr-outcomes-grid-three-card .rr-outcome-more {
   display: block;
   font-size: 17px;
   font-weight: 700;
@@ -709,8 +711,48 @@ body:not(.home) #site > main {
   margin-top: 48px;
 }
 
-.rr-allies-show-img-desc .rr-ally-name {
+.rr-allies-show-img-desc .rr-ally-name,
+.rr-outcomes-grid-three-card .rr-outcome-title > a {
   color: #1a1a1a;
+}
+
+/* SOW RR OUTCOMES GRID 3 CARD */
+.rr-outcomes-grid-three-card {
+  grid-gap: 30px;
+}
+
+.rr-outcomes-grid-three-card .rr-outcome-item {
+  padding: 20px;
+  border-radius: 4px;
+  border-color: #dddddd;
+  background-color: #f7f7f7;
+}
+
+.rr-outcomes-grid-three-card .rr-outcome-title {
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.rr-outcomes-grid-three-card .rr-outcome-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.rr-outcomes-grid-three-card a.rr-outcome-more {
+  display: inline-block;
+  text-decoration: underline;
+  margin: 15px 0;
+}
+
+.rr-outcomes-grid-three-card .tax-regions-list {
+  font-size: 12px;
+}
+
+.rr-outcomes-grid-three-card .post-date {
+  color: #858585;
+  font-size: 12px;
+  font-style: italic;
 }
 
 /* -------------------------- MEDIA QUERIES ------------------------- */
