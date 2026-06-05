@@ -694,6 +694,25 @@ body:not(.home) #site > main {
 	font-size: 12px;
 }
 
+/* SOW RR ALLIES */
+.rr-allies .rr-ally-name {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
+  margin-bottom: 15px;
+}
+
+.rr-allies .rr-ally-item {
+  display: grid;
+  gap: 30px;
+  margin-top: 48px;
+}
+
+.rr-allies-show-img-desc .rr-ally-name {
+  color: #1a1a1a;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
@@ -730,6 +749,11 @@ body:not(.home) #site > main {
     font-size: 40px;
   }
 
+  /* SOW RR ALLIES */
+  .rr-allies .rr-ally-item {
+    grid-template-columns: 20% 80%;
+  }
+
 }
 
 @media(max-width: 768px) {
@@ -744,6 +768,11 @@ body:not(.home) #site > main {
 
   #rgnrfs-navigation .navbar-buttons {
     gap: 20px;
+  }
+
+  /* SOW RR ALLIES */
+  .rr-allies .rr-ally-item img {
+    max-width: 100px;
   }
 
 }
