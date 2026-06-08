@@ -524,6 +524,10 @@ body:not(.home) #site > main {
   font-size: 21px;
 }
 
+.convenings-post-header .date-location > p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* RELATED CONVENINGS */
 .related-convenings {
   margin: 100px 0;
@@ -759,15 +763,15 @@ body:not(.home) #site > main {
 @media(min-width: 769px){
   .layout-wrap {
     display: flex;
-    gap: 50px;
+    gap: 30px;
   }
 
   .layout-wrap .col-left {
-    max-width: 66.66667%;
+    width: calc(66.7% - (0.333 * 30px));
   }
 
   .layout-wrap .col-right {
-    max-width: 33.33333%
+    width: calc(33.3% - (0.667 * 30px));
   }
 
   /* SINGLE CONVENINGS */
