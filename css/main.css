@@ -660,41 +660,49 @@ body:not(.home) #site > main {
 }
 
 /* ORBIT GRID 3 */
-.articles-grid3 {
+.articles-grid3,
+.articles-grid2 {
 	grid-gap: 30px;
 }
 
-.articles-grid3 .orbit-article-db {
+.articles-grid3 .orbit-article-db,
+.articles-grid2 .orbit-article-db {
 	border-radius: 4px;
 	border-color: #dddddd;
 	background-color: #f7f7f7;
 }
 
-.articles-grid3 .orbit-thumbnail-bg {
+.articles-grid3 .orbit-thumbnail-bg,
+.articles-grid2 .orbit-thumbnail-bg {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 }
 
-.articles-grid3 .post-content {
+.articles-grid3 .post-content,
+.articles-grid2 .post-content {
 	padding: 20px;
 }
 
-.articles-grid3 .post-title a {
+.articles-grid3 .post-title a,
+.articles-grid2 .post-title a {
 	color: #1a1a1a;
 	font-weight: 900;
 }
 
-.articles-grid3 .post-title a:hover {
+.articles-grid3 .post-title a:hover,
+.articles-grid2 .post-title a:hover {
 	color: inherit;
 }
 
-.articles-grid3 .post-date {
+.articles-grid3 .post-date,
+.articles-grid2 .post-date {
 	color: #858585;
 	font-size: 12px;
 	font-style: italic;
 }
 
-.articles-grid3 .tax-regions-list {
+.articles-grid3 .tax-regions-list,
+.articles-grid2 .tax-regions-list {
 	font-size: 12px;
 }
 
