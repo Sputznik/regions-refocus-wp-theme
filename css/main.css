@@ -759,6 +759,122 @@ body:not(.home) #site > main {
   font-style: italic;
 }
 
+/* SOW RR REGIONS HERO */
+.rr-regions-hero {
+  display: flex;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.rr-regions-hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background: linear-gradient(180deg, #000, transparent);
+}
+
+.rr-regions-hero .rr-regions-hero-inner {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.rr-regions-hero .featured-convening {
+  width: 700px;
+  padding: 70px;
+  color: #ffffff;
+  max-width: 100%;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(33, 33, 33, .8);
+}
+
+.rr-regions-hero .featured-convening a {
+  color: #fdb500;
+  text-decoration: underline;
+  transition: .05s ease-in-out;
+}
+
+.rr-regions-hero .featured-convening a:hover {
+  color: #2d7990;
+}
+
+.rr-regions-hero .featured-top {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rr-regions-hero .featured-top .title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.rr-regions-hero .other-convening {
+  display: none;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.rr-regions-hero .region-headline {
+  margin-top: auto;
+  color: #ffffff;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 9;
+}
+
+.rr-regions-hero .region-label {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.rr-regions-hero .region-name {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.rr-regions-hero .post-title::before {
+  display: block;
+  content: "";
+  width: 35px;
+  height: 5px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.rr-regions-hero .post-title {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.rr-regions-hero .post-excerpt {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.rr-regions-hero .co-conveners > .title {
+  font-size: 15px;
+  color: inherit;
+  font-weight: 700;
+}
+
+.rr-regions-hero .co-conveners a {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
@@ -800,6 +916,11 @@ body:not(.home) #site > main {
     grid-template-columns: 20% 80%;
   }
 
+  /* SOW RR REGIONS HERO */
+  .rr-regions-hero .other-convening-lg {
+    display: inline-block;
+  }
+
 }
 
 @media(max-width: 768px) {
@@ -819,6 +940,32 @@ body:not(.home) #site > main {
   /* SOW RR ALLIES */
   .rr-allies .rr-ally-item img {
     max-width: 100px;
+  }
+
+  /* SOW RR REGIONS HERO */
+  .rr-regions-hero .rr-regions-hero-inner {
+    flex-direction: column;
+  }
+
+  .rr-regions-hero .region-headline {
+    margin-top: 120px;
+  }
+
+  .rr-regions-hero .featured-convening {
+    padding: 20px;
+  }
+
+  .rr-regions-hero .post-title {
+    font-size: 25px;
+  }
+
+  .rr-regions-hero .other-convening-sm {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .rr-regions-hero .region-headline {
+    padding-bottom: 0;
   }
 
 }
