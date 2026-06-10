@@ -18,7 +18,11 @@ $outcome_ids = ( isset( $instance['outcomes__in'] ) && !empty( $instance['outcom
         <h3 class="rr-outcome-title">
           <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer"><?php echo $outcome_title; ?></a>
         </h3>
-        <div class="outcome-excerpt"><?php echo get_the_excerpt( $outcome_id ); ?></div>
+        <div class="outcome-excerpt">
+          <?php if( has_excerpt( $outcome_id ) ):?>
+          <?php echo get_the_excerpt( $outcome_id ); ?>
+          <?php endif; ?>
+        </div>
         <div class="rr-outcome-meta font-calibre">
           <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="rr-outcome-more font-calibre">See More</a>
           <?php if( !empty( $regions_list ) ):?>
