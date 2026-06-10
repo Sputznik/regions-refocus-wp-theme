@@ -875,6 +875,20 @@ body:not(.home) #site > main {
   margin-bottom: 10px;
 }
 
+/* SOW RR CROSS REGIONAL SPOTLIGHT */
+.rr-cross-regional-spotlight .orbit-thumbnail-bg {
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.rr-cross-regional-spotlight .title {
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 900;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
