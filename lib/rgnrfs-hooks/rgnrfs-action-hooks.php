@@ -30,5 +30,5 @@ add_action('rgnrfs_nav_menu', function( $location, $menu_id ){
 
 /* PRINT SITE LOGO TO THE HEADER */
 add_action('rgnrfs_site_logo', function(){
-	include( RGNRFS_THEME_PATH.'/partials/site-logo.php' );
+	include( RGNRFS_THEME_PATH.'/partials/theme-customizer/site-logo.php' );
 });
