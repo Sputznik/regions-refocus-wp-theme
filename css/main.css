@@ -775,6 +775,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   min-height: 100vh;
   background-size: cover;
   background-position: 50%;
+  position: relative;
 }
 
 .rr-regions-hero::after {
