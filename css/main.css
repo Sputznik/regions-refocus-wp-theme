@@ -250,7 +250,8 @@ hr {
   background-color: rgba(26, 26, 26, .8);
 }
 
-body:not(.home) #site > main {
+/* ADD SPACING TO MAIN CONTENT IF TRANSPARENT HEADER IS DISABLED */
+body:not(.rgnrfs-transparent-navbar) #site > main {
   margin-top: 80px;
 }
 

@@ -3,7 +3,7 @@
  * The template for displaying header menu
 */
 ?>
-<header class="rgnrfs-site-header<?php if( !is_front_page() ){ echo " scrolled"; } ?>">
+<header class="rgnrfs-site-header<?php do_action( 'rgnrfs_transparent_navbar_classes' );?>">
   <?php get_template_part('partials/mobile-menu');?>
   <nav id="rgnrfs-navigation" class="navbar">
     <div id="primary-navbar-container" class="container-fluid">

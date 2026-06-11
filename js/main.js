@@ -138,10 +138,10 @@ jQuery(document).ready(function(){
 
     /* CHANGE THE BG-COLOR OF HEADER NAVIGATION ONLY FOR FRONTPAGE */
     if( jQuery(this).scrollTop() > 70 ){
-      jQuery('body.home .rgnrfs-site-header').addClass('scrolled');
+      jQuery('body.rgnrfs-transparent-navbar .rgnrfs-site-header').addClass('scrolled');
     }
     else {
-      jQuery('body.home .rgnrfs-site-header').removeClass('scrolled');
+      jQuery('body.rgnrfs-transparent-navbar .rgnrfs-site-header').removeClass('scrolled');
     }
 
     /* SHOWS BACK TO TOP BUTTON */
