@@ -16,6 +16,7 @@ if( !defined( 'RGNRFS_THEME_VERSION' ) ){
 // INCLUDE FILES
 $inc_files = array(
   'lib/class-rgnrfs-theme.php',
+  'lib/customize-theme/customize-theme.php',
   'lib/wp-bootstrap-navwalker.php',
   'lib/rgnrfs-hooks/rgnrfs-action-hooks.php',
   'lib/class-rgnrfs-convenings-cpt.php',
