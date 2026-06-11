@@ -2,7 +2,8 @@
 
 // INCLUDE FILES
 $inc_files = array(
-	'settings/class-rgnrfs-theme-customize.php'
+	'settings/class-rgnrfs-theme-customize.php',
+	'settings/logo-settings.php'
 );
 
 foreach( $inc_files as $inc_file ){
