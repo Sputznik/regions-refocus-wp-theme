@@ -3,6 +3,7 @@
 // INCLUDE FILES
 $inc_files = array(
 	'settings/class-rgnrfs-theme-customize.php',
+	'settings/class-rgnrfs-theme-css-variables.php',
 	'settings/logo-settings.php'
 );
 
