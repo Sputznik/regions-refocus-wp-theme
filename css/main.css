@@ -703,6 +703,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
 .orbit-btn-load-parent button.load-more {
   border: 0;
   color: #ffffff;
+  min-width: auto;
   margin-top: 20px;
   padding: 8px 16px;
   background: #000000;
@@ -711,7 +712,8 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
 /* SOW RR ALLIES */
 .rr-allies .rr-ally-name,
 .rr-outcomes.rr-outcomes-list .rr-outcome-title,
-.rr-outcomes-grid-three-card .rr-outcome-more {
+.rr-outcomes-grid-three-card .rr-outcome-more,
+.rgnrfs-library-search-results .see-resource {
   display: block;
   font-size: 17px;
   font-weight: 700;
@@ -763,6 +765,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   font-size: 12px;
 }
 
+.rgnrfs-library-search-results .post-date,
 .rr-outcomes-grid-three-card .post-date {
   color: #858585;
   font-size: 12px;
@@ -898,6 +901,56 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   font-size: 19px;
   line-height: 1.4;
   font-weight: 900;
+}
+
+/* LIBRARY FILTER FORM */
+.orbit-search-form button[type="submit"]{
+  background-color: #fdb500;
+  padding: 6px 12px;
+}
+
+.rgnrfs-library-search-results .rgnrfs-library-search-result-item {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.rgnrfs-library-search-results .orbit-article-db:not(:last-child) {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.rgnrfs-library-search-results .resource-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.rgnrfs-library-search-results .resource-icon i {
+  font-size: 30px;
+}
+
+.rgnrfs-library-search-results .resource-content {
+  width: 100%;
+}
+
+.rgnrfs-library-search-results .post-meta,
+.rgnrfs-library-search-results .resource-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rgnrfs-library-search-results .post-type {
+  padding: 3px 6px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #fdb500;
+}
+
+.rgnrfs-library-search-results a.see-resource {
+  margin-bottom: 0;
+  display: inline-block;
+  text-decoration: underline;
 }
 
 /* -------------------------- MEDIA QUERIES ------------------------- */

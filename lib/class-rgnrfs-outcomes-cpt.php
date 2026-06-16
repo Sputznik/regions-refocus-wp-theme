@@ -56,6 +56,19 @@ class RGNRFS_OUTCOMES_CPT {
     return $meta_box;
   }
 
+  static function get_resource_type_icon( $resource_type ){
+    switch( $resource_type ){
+      case 'video':
+        return '<i class="fa-solid fa-video" aria-hidden="true"></i>';
+      case 'weblink':
+        return '<i class="fa-solid fa-link" aria-hidden="true"></i>';
+      case 'document':
+        return '<i class="fa-regular fa-file aria-hidden="true"></i>';
+      default:
+        return "";
+    }
+  }
+
 }
 
 new RGNRFS_OUTCOMES_CPT();

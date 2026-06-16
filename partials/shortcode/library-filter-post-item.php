@@ -1,0 +1,39 @@
+<?php
+$post_id   = get_the_ID();
+$post_type = get_post_type( $post_id );
+?>
+<div class="rgnrfs-library-search-result-item rgnrfs-link-color">
+  <div class="resource-icon">
+    <?php if( $post_type === 'outcomes' ): $outcome_resource_type = get_post_meta( $post_id, 'rgnrfs_resource_type', true ); ?>
+      <?php echo RGNRFS_OUTCOMES_CPT::get_resource_type_icon( $outcome_resource_type ); ?>
+    <?php elseif( $post_type === 'convenings' ): ?>
+      <?php echo RGNRFS_OUTCOMES_CPT::get_resource_type_icon('document'); ?>
+    <?php endif;?>
+  </div>
+  <div class="resource-content">
+    <h5><?php echo get_the_title( $post_id ); ?></h5>
+    <div class="post-excerpt">
+      <?php if( has_excerpt( $post_id ) ):?>
+        <?php echo wp_trim_words( strip_shortcodes( get_the_excerpt( $post_id ) ), 25, ' ... '.'<a href="'.get_the_permalink( $post_id ).'">See More</a>' ); ?>
+      <?php endif; ?>
+    </div>
+    <ul class="post-meta list-unstyled">
+      <li>
+        <span class="post-type text-capitalize"><?php echo $post_type; ?></span>
+      </li>
+      <?php if( $post_type === 'outcomes' ): $resource_url  = get_post_meta( $post_id, 'rgnrfs_resource_url', true ); ?>
+        <li>
+          <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="see-resource font-calibre">See More</a>
+        </li>
+        <li>
+          <span class="post-date"><?php echo get_the_date( 'Y-m-d', $post_id );?></span>
+        </li>
+      <?php endif; ?>
+      <?php if( $post_type === 'convenings' ): $convening_date_range  = get_post_meta( $post_id, "rgnrfs_date_range", true ); ?>
+        <li>
+          <span class="post-date"><?php echo $convening_date_range;?></span>
+        </li>
+      <?php endif; ?>
+    </ul>
+  </div>
+</div>

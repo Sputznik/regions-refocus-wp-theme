@@ -24,7 +24,8 @@ $inc_files = array(
   'lib/class-rgnrfs-regions-taxonomy.php',
   'lib/class-rgnrfs-initiatives-taxonomy.php',
   'lib/class-rgnrfs-siteorigin.php',
-  'lib/class-rgnrfs-transparent-navbar.php'
+  'lib/class-rgnrfs-transparent-navbar.php',
+  'lib/class-rgnrfs-orbit-filter.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }
