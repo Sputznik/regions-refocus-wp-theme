@@ -953,6 +953,18 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   text-decoration: underline;
 }
 
+/* 404 PAGE */
+.error404 .error-page-wrap {
+  margin: 150px 0;
+}
+
+.error404 .error-header {
+  margin: 50px;
+  font-weight: 600;
+  font-size: 100px;
+  letter-spacing: 5px;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
