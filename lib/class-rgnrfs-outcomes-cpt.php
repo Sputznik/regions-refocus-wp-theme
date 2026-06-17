@@ -10,6 +10,9 @@ class RGNRFS_OUTCOMES_CPT {
     /* REGISTER CUSTOM META-FIELDS USING ORBIT-BUNDLE PLUGIN */
     add_filter( 'orbit_meta_box_vars', array( $this, 'register_meta_fields' ) );
 
+    /* REGISTER TAXONOMY USING ORBIT-BUNDLE PLUGIN */
+    add_filter( 'orbit_taxonomy_vars', array( $this, 'register_taxonomy' ) );
+
   }
 
   function register_cpt( $post_types ){
@@ -67,6 +70,16 @@ class RGNRFS_OUTCOMES_CPT {
       default:
         return "";
     }
+  }
+
+  function register_taxonomy( $taxonomies ){
+    $taxonomies['outcome-type']	= array(
+      'label'       => 'Outcome Type',
+      'slug'        => 'outcome-type',
+      'post_types'  => array( 'outcomes' )
+    );
+
+    return $taxonomies;
   }
 
 }
