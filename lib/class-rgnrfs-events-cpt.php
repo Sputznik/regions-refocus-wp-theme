@@ -10,6 +10,9 @@ class RGNRFS_EVENTS_CPT {
     /* REGISTER CUSTOM META-FIELDS USING ORBIT-BUNDLE PLUGIN */
     add_filter( 'orbit_meta_box_vars', array( $this, 'register_meta_fields' ) );
 
+    /* REGISTER TAXONOMY USING ORBIT-BUNDLE PLUGIN */
+    add_filter( 'orbit_taxonomy_vars', array( $this, 'register_taxonomy' ) );
+
   }
 
   function register_cpt( $post_types ){
@@ -49,6 +52,16 @@ class RGNRFS_EVENTS_CPT {
     );
 
     return $meta_box;
+  }
+
+  function register_taxonomy( $taxonomies ){
+    $taxonomies['event-type']	= array(
+      'label'       => 'Event Type',
+      'slug'        => 'event-type',
+      'post_types'  => array( 'events' )
+    );
+
+    return $taxonomies;
   }
 
 }
