@@ -9,9 +9,7 @@ $image_ids_string = get_post_meta( get_the_ID(), 'rgnrfs_initiatives_page_hero_i
 <div id="rgnrfs-initiatives-page-template">
   <?php if( !empty( $image_ids_string ) ) : $image_ids = explode( ',', $image_ids_string ); ?>
   <div class="initiatives-page-slider-wrapper">
-    <div class="initiatives-page-slider-overlay">
-      <h2 class="initiatives-page-slider-title"><?php the_title(); ?></h2>
-    </div>
+    <div class="initiatives-page-slider-overlay"></div>
     <div class="initiatives-page-slider">
       <?php foreach ( $image_ids as $image_id ) : $image_url = wp_get_attachment_image_url( intval( $image_id ), 'large' ); ?>
         <?php if( $image_url ): ?>
@@ -21,6 +19,11 @@ $image_ids_string = get_post_meta( get_the_ID(), 'rgnrfs_initiatives_page_hero_i
     </div>
   </div>
   <?php endif; ?>
-  <div class="initiatives-page-post-content"><?php the_content(); ?></div>
+  <div class="container">
+    <div class="initiatives-page-post-content">
+      <h2 class="initiatives-page-slider-title"><?php the_title(); ?></h2>
+      <?php the_content(); ?>
+    </div>
+  </div>
 </div>
 <?php get_footer(); ?>
