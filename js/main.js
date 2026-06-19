@@ -169,4 +169,16 @@ jQuery(document).ready(function(){
     if( e.keyCode == 27){ jQuery('.rgnrfs-modal').hide(); }
   });
 
+  /* INITIATIVES PAGE SLICK SLIDER */
+  jQuery('.initiatives-page-slider').slick({
+    dots: true,
+    speed: 500,
+    arrows: false,
+    autoplay: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000
+  });
+
 });

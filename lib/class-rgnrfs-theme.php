@@ -28,6 +28,7 @@ class RGNRFS_THEME {
     wp_enqueue_style( 'rgnrfs-core-css', RGNRFS_THEME_URI.'/css/main.css', array('font-awesome'), RGNRFS_THEME_VERSION );
 
     // ENQUEUE SCRIPTS
+    wp_enqueue_script( 'rgnrfs-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true );
     wp_enqueue_script( 'rgnrfs-core-js', RGNRFS_THEME_URI.'/js/main.js', array('jquery'), RGNRFS_THEME_VERSION, true );
 
   }

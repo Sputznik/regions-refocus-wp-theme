@@ -183,6 +183,62 @@ hr {
   border-top: 1px solid rgba(0,0,0,.1);
 }
 
+/* SLICK SLIDER */
+.slick-slider{ position:relative;display:block;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent; }
+.slick-list{ position:relative;display:block;overflow:hidden;margin:0;padding:0; }
+.slick-list:focus{ outline:none; }
+.slick-list.dragging{ cursor:pointer;cursor:hand; }
+.slick-slider .slick-track, .slick-slider .slick-list{ -webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0); }
+.slick-track{ position:relative;top:0;left:0;display:block; }
+.slick-track:before, .slick-track:after{ display:table;content:'';}
+.slick-track:after{ clear:both; }
+.slick-loading .slick-track{ visibility:hidden; }
+.slick-slide{ display:none;float:left;height:100%;min-height:1px;outline: none; }
+[dir='rtl'] .slick-slide{ float:right; }
+.slick-slide img{ display:block; outline: none; }
+.slick-slide.slick-loading img{ display:none; }
+.slick-slide.dragging img{ pointer-events:none; }
+.slick-initialized .slick-slide{ display:block; }
+.slick-loading .slick-slide{ visibility:hidden; }
+.slick-vertical .slick-slide{ display:block;height:auto;border:1px solid transparent; }
+
+ul.slick-dots{
+	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	list-style: none;
+	text-align: center;
+	display: block;
+	margin-top: 23px;
+	padding: 0;
+}
+
+ul.slick-dots li{ display: inline-block; line-height: 1; }
+ul.slick-dots li button{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+	padding: 0;
+	margin: 0 4px;
+	cursor: pointer;
+	background: #ffffff;
+	outline: none;
+	vertical-align: top;
+	border: 2px solid #dedede;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+}
+
+ul.slick-dots li button:hover, ul.slick-dots li.slick-active button{ background: #fdb500; border-color: #fdb500; }
+
 .text-capitalize { text-transform: capitalize; }
 
 .text-uppercase { text-transform: uppercase; }
@@ -857,7 +913,8 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   font-weight: 700;
 }
 
-.rr-regions-hero .post-title::before {
+.rr-regions-hero .post-title::before,
+#rgnrfs-initiatives-page-template .initiatives-page-slider-title::before {
   display: block;
   content: "";
   width: 35px;
@@ -951,6 +1008,65 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   margin-bottom: 0;
   display: inline-block;
   text-decoration: underline;
+}
+
+/* INITIATIVES PAGE SLICK SLIDER */
+#rgnrfs-initiatives-page-template .initiatives-page-slider-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+#rgnrfs-initiatives-page-template .initiatives-page-slider-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#rgnrfs-initiatives-page-template .initiatives-page-slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#rgnrfs-initiatives-page-template .initiatives-page-slider-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 810px;
+  padding: 0 15px;
+}
+
+.initiatives-page-slider .slick-dots {
+  margin: 0;
+  z-index: 10;
+  bottom: 30px;
+  position: absolute;
+}
+
+.initiatives-page-slider ul.slick-dots li button {
+  width: 15px;
+  height: 15px;
+}
+
+#rgnrfs-initiatives-page-template .initiatives-page-post-content {
+  position: relative;
+  z-index: 9;
+  max-width: 780px;
+  margin: -100px auto 0;
 }
 
 /* 404 PAGE */
@@ -1056,6 +1172,12 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
 
   .rr-regions-hero .region-headline {
     padding-bottom: 0;
+  }
+
+  /* INITIATIVES PAGE SLICK SLIDER */
+  .initiatives-page-slider .slick-dots {
+    bottom: 210px;
+    padding: 0 10px;
   }
 
 }
