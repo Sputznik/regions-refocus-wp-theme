@@ -20,15 +20,14 @@ $inc_files = array(
   'lib/wp-bootstrap-navwalker.php',
   'lib/rgnrfs-hooks/rgnrfs-action-hooks.php',
   'lib/class-rgnrfs-convenings-cpt.php',
-  'lib/class-rgnrfs-events-cpt.php',
+  'lib/rgnrfs-cpt-events/rgnrfs-cpt-events.php',
   'lib/class-rgnrfs-outcomes-cpt.php',
   'lib/class-rgnrfs-regions-taxonomy.php',
   'lib/class-rgnrfs-initiatives-taxonomy.php',
   'lib/class-rgnrfs-siteorigin.php',
   'lib/class-rgnrfs-transparent-navbar.php',
   'lib/class-rgnrfs-orbit-filter.php',
-  'lib/initiatives-page-admin/class-rgnrfs-initiatives-page-admin.php',
-  'lib/rgnrfs-cpt-events/class-rgnrfs-event-video-meta.php'
+  'lib/initiatives-page-admin/class-rgnrfs-initiatives-page-admin.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }
