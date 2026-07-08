@@ -30,11 +30,6 @@ class RGNRFS_EVENT_ALLIES_META {
 
     wp_enqueue_style( 'rgnrfs-repeater-css', $assets_path.'/css/main.css', array(), RGNRFS_THEME_VERSION );
     wp_enqueue_script( 'rgnrfs-repeater-js', $assets_path.'/js/repeater.js', array( 'jquery' ), RGNRFS_THEME_VERSION, true );
-
-    wp_localize_script( 'rgnrfs-repeater-js', 'rgnrfsRepeaterSettings', array(
-      'meta_key' => $this->meta_key
-    ) );
-
   }
 
   public function render_html( $post ) {
@@ -43,7 +38,7 @@ class RGNRFS_EVENT_ALLIES_META {
 
     wp_nonce_field( $this->nonce_action, $this->nonce_name );
     ?>
-    <div id="<?php echo esc_attr( $this->meta_key ); ?>_container" class="rgnrfs-repeater-wrapper">
+    <div id="<?php echo esc_attr( $this->meta_key ); ?>_container" class="rgnrfs-repeater-wrapper" data-behaviour="rgnrfs-allies-repeater" data-meta-key="<?php echo esc_attr( $this->meta_key ); ?>">
       <div class="repeater-rows">
         <?php
           $index = 0;
