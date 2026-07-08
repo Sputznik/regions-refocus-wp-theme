@@ -13,6 +13,22 @@ class RGNRFS_EVENTS_CPT {
     /* REGISTER TAXONOMY USING ORBIT-BUNDLE PLUGIN */
     add_filter( 'orbit_taxonomy_vars', array( $this, 'register_taxonomy' ) );
 
+    /* ENQUEUE ASSETS */
+    add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
+
+  }
+
+  public function enqueue_admin_assets( $hook ) {
+    global $post;
+
+    if( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) || ( isset( $post->post_type ) && $post->post_type !== 'events' ) ){
+      return;
+    }
+
+    $assets_path = RGNRFS_THEME_URI.'/lib/rgnrfs-cpt-events/assets';
+
+    wp_enqueue_style( 'rgnrfs-repeater-css', $assets_path.'/css/main.css', array(), RGNRFS_THEME_VERSION );
+    wp_enqueue_script( 'rgnrfs-repeater-js', $assets_path.'/js/repeater.js', array( 'jquery' ), RGNRFS_THEME_VERSION, true );
   }
 
   function register_cpt( $post_types ){

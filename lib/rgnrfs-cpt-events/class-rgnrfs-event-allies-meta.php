@@ -12,24 +12,10 @@ class RGNRFS_EVENT_ALLIES_META {
   public function __construct() {
     add_action( 'add_meta_boxes', array( $this, 'register_meta_box' ) );
     add_action( 'save_post', array( $this, 'save_cb' ) );
-    add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
   }
 
   public function register_meta_box() {
     add_meta_box( $this->meta_key.'_box', 'Event Allies', array( $this, 'render_html' ), $this->post_type, 'normal', 'default' );
-  }
-
-  public function enqueue_admin_assets( $hook ) {
-    global $post;
-
-    if( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) || ( isset( $post->post_type ) && $post->post_type !== $this->post_type ) ){
-      return;
-    }
-
-    $assets_path = RGNRFS_THEME_URI.'/lib/rgnrfs-cpt-events/assets';
-
-    wp_enqueue_style( 'rgnrfs-repeater-css', $assets_path.'/css/main.css', array(), RGNRFS_THEME_VERSION );
-    wp_enqueue_script( 'rgnrfs-repeater-js', $assets_path.'/js/repeater.js', array( 'jquery' ), RGNRFS_THEME_VERSION, true );
   }
 
   public function render_html( $post ) {
