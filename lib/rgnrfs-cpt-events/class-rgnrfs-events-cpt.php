@@ -29,6 +29,7 @@ class RGNRFS_EVENTS_CPT {
 
     wp_enqueue_style( 'rgnrfs-repeater-css', $assets_path.'/css/main.css', array(), RGNRFS_THEME_VERSION );
     wp_enqueue_script( 'rgnrfs-repeater-js', $assets_path.'/js/repeater.js', array( 'jquery' ), RGNRFS_THEME_VERSION, true );
+    wp_enqueue_script( 'rgnrfs-autocomplete-js', $assets_path.'/js/autocomplete.js', array('jquery', 'jquery-ui-autocomplete'), RGNRFS_THEME_VERSION, true );
   }
 
   function register_cpt( $post_types ){
