@@ -1,0 +1,52 @@
+/* VIDEO META */
+.rgnrfs_event_video-wrapper {
+  padding: 10px 0;
+}
+
+.rgnrfs_event_video-wrapper label {
+  display:block;
+  margin-bottom:5px;
+  font-weight:bold;
+}
+
+/* ALLIES REPEATER FIELD */
+.rgnrfs-repeater-wrapper {
+  padding: 10px 0;
+}
+
+.rgnrfs-repeater-wrapper .repeater-rows {
+  margin-bottom: 15px;
+}
+
+.rgnrfs-repeater-wrapper .repeater-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccd0d4;
+}
+
+.rgnrfs-repeater-wrapper .repeater-row .field-group {
+  flex: 1;
+}
+
+.rgnrfs-repeater-wrapper .repeater-row label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rgnrfs-repeater-wrapper .repeater-row .remove-row-btn {
+  color: #b32d2e;
+  background-color: #f6f7f7;
+  border-color: #b32d2e;
+}
+
+.rgnrfs-repeater-wrapper .repeater-row .remove-row-btn:hover {
+  color: #ffffff;
+  background-color: #b32d2e;
+  border-color: #b32d2e;
+}
