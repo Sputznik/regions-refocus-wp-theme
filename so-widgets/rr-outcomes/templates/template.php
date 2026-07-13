@@ -1,12 +1,24 @@
 <?php
 $template_style = $instance['template_style'];
+$outcome_ids    = ( isset( $instance['outcomes__in'] ) && !empty( $instance['outcomes__in'] ) )  ? explode( ',', $instance['outcomes__in'] ) : array();
+
+// FETCH DATA FROM CPT EVENTS CUSTOM FIELD
+if( isset( $instance['rgnrfs_outcomes_cf'] ) && !empty( $instance['rgnrfs_outcomes_cf'] ) ){
+  $post_id = get_queried_object_id();
+  $template_style = 'list';
+
+  if( !empty( $post_id ) ){
+    $outcomes    = get_post_meta( $post_id, 'rgnrfs_event_outcomes', true );
+    $outcome_ids = !empty( $outcomes ) ? explode( ',', $outcomes ) : array();
+  }
+}
+
 $template_class = 'rr-outcomes-'.str_replace( '_', '-', $template_style );
 
 if( $template_style == 'grid_three_card' ){
   $template_class .= ' orbit-three-grid';
 }
 
-$outcome_ids = ( isset( $instance['outcomes__in'] ) && !empty( $instance['outcomes__in'] ) )  ? explode( ',', $instance['outcomes__in'] ) : array();
 ?>
 <div class="rr-outcomes rgnrfs-link-color <?php echo $template_class; ?>">
   <?php foreach( $outcome_ids as $outcome_id ):

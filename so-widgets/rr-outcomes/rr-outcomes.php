@@ -12,11 +12,23 @@ class SO_RGNRFS_OUTCOMES extends SiteOrigin_Widget {
 			'rr-outcomes',
 			__('RR Outcomes', 'siteorigin-widgets'),
 			array(
-				'description' => __('Regions Refocus Outcomes Widget.'),
-				'help'        => '',
+				'description' => __('Regions Refocus Outcomes Widget.')
 			),
 			array(),
 			array(
+				'rgnrfs_outcomes_cf' => array(
+					'type' 		=> 'checkbox',
+					'label' 	=> __( 'Show outcomes from custom field ?', 'siteorigin-widgets' ),
+					'description' => __( 'Custom field values will only appear on single-events template.', 'siteorigin-widgets' ),
+					'default' => false,
+					'state_emitter' => array(
+						'callback' => 'conditional',
+						'args'     => array(
+							'rgnrfs_get_outcomes_cf[show]: val',
+							'rgnrfs_get_outcomes_cf[hide]: !val'
+						),
+					),
+				),
 				'template_style' => array(
 					'type' 		=> 'select',
 					'label' 	=> __( 'Choose a Style', 'siteorigin-widgets' ),
@@ -24,12 +36,20 @@ class SO_RGNRFS_OUTCOMES extends SiteOrigin_Widget {
 						'list' 						=> 'List',
 						'grid_three_card' => 'Grid 3 Card'
 					),
+					'state_handler' => array(
+						'rgnrfs_get_outcomes_cf[show]'	=> array( 'hide' ),
+						'rgnrfs_get_outcomes_cf[hide]'	=> array( 'show' )
+					)
 				),
 				'outcomes__in' => array(
 					'type'   		 => 'autocomplete',
 					'label'  		 => __( 'Search and Select Outcome(s)', 'siteorigin-widgets' ),
 					'source'		 => 'posts',
-					'post_types' => array('outcomes')
+					'post_types' => array('outcomes'),
+					'state_handler' => array(
+						'rgnrfs_get_outcomes_cf[show]'	=> array( 'hide' ),
+						'rgnrfs_get_outcomes_cf[hide]'	=> array( 'show' )
+					),
 				)
 			),
 			get_template_directory()."/so-widgets/rr-outcomes"
