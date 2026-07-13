@@ -4,8 +4,6 @@
 	Description: Regions Refocus Allies Widget.
 	Author: Stephen Anil, Sputznik
 	Author URI:	https://sputznik.com
-	Widget URI:
-	Video URI:
 */
 class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 
@@ -14,11 +12,23 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 			'rr-allies',
 			__('RR Allies', 'siteorigin-widgets'),
 			array(
-				'description' => __('Regions Refocus Allies Widget.'),
-				'help'        => '',
+				'description' => __('Regions Refocus Allies Widget.')
 			),
 			array(),
 			array(
+				'rgnrfs_allies_cf' => array(
+					'type' 		=> 'checkbox',
+					'label' 	=> __( 'Show allies from custom fields ?', 'siteorigin-widgets' ),
+					'description' => __( 'Custom field values will only appear on single-events template.', 'siteorigin-widgets' ),
+					'default' => false,
+					'state_emitter' => array(
+						'callback' => 'conditional',
+						'args'     => array(
+							'rgnrfs_get_allies_cf[show]: val',
+							'rgnrfs_get_allies_cf[hide]: !val'
+						),
+					),
+				),
 				'template_style' => array(
 					'type' 		=> 'select',
 					'label' 	=> __( 'Choose a Style', 'siteorigin-widgets' ),
@@ -30,6 +40,10 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 						'callback' => 'select',
 						'args' 		 => array( 'template_style' )
 					),
+					'state_handler' => array(
+						'rgnrfs_get_allies_cf[show]'	=> array( 'hide' ),
+						'rgnrfs_get_allies_cf[hide]'	=> array( 'show' )
+					),
 				),
 				'allies' => array(
 					'type' 	=> 'repeater',
@@ -38,11 +52,11 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 					'fields' => array(
 						'ally_name' => array(
 							'type' 			=> 'text',
-							'label' 		=> __( 'Ally Name', 'siteorigin-widgets' ),
+							'label' 		=> __( 'Ally Name', 'siteorigin-widgets' )
 						),
 						'ally_url' => array(
 							'type' 			=> 'text',
-							'label' 		=> __( 'URL', 'siteorigin-widgets' ),
+							'label' 		=> __( 'URL', 'siteorigin-widgets' )
 						),
 						'ally_description' => array(
 							'type' => 'textarea',
@@ -50,7 +64,7 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 							'rows' => 10,
 							'state_handler' => array(
 								'template_style[show_img_desc]' => array('show'),
-								'template_style[hide_img_desc]' => array('hide'),
+								'template_style[hide_img_desc]' => array('hide')
 							),
 						),
 						'ally_logo' => array(
@@ -62,11 +76,15 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 							'fallback' 	=> false,
 							'state_handler' => array(
 								'template_style[show_img_desc]' => array('show'),
-								'template_style[hide_img_desc]' => array('hide'),
+								'template_style[hide_img_desc]' => array('hide')
 							),
 						)
-					)
-				),
+					),
+					'state_handler' => array(
+						'rgnrfs_get_allies_cf[show]' => array( 'hide' ),
+						'rgnrfs_get_allies_cf[hide]' => array( 'show' )
+					),
+				)
 
 			),
 			get_template_directory()."/so-widgets/rr-allies"
