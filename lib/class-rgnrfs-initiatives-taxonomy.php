@@ -11,7 +11,7 @@ class RGNRFS_INITIATIVES_TAXONOMY {
     $taxonomies['initiatives']	= array(
       'label'			    => 'Initiatives',
       'slug' 			    => 'initiatives',
-      'post_types'	  => array( 'convenings', 'events', 'outcomes' )
+      'post_types'	  => array( 'events', 'outcomes' )
     );
 
     return $taxonomies;

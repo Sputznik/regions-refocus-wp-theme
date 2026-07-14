@@ -17,7 +17,7 @@ class RGNRFS_REGIONS_TAXONOMY {
     $taxonomies['regions']	= array(
       'label'			    => 'Regions',
       'slug' 			    => 'regions',
-      'post_types'	  => array( 'convenings', 'events', 'outcomes' )
+      'post_types'	  => array( 'events', 'outcomes' )
     );
 
     return $taxonomies;
