@@ -24,25 +24,20 @@ class RGNRFS_EVENT_VIDEO_META {
 
     // DEFAULT STATE
     $values = wp_parse_args( $meta_data, array(
-      'id'   => '',
-      'link' => '',
-      'text' => ''
+      'url'   => '',
+      'title' => ''
     ) );
 
     wp_nonce_field( $this->nonce_action, $this->nonce_name );
     ?>
     <div class="<?php echo esc_attr( $this->meta_key ); ?>-wrapper">
       <p>
-        <label for="<?php echo esc_attr( $this->meta_key ); ?>-id">Video ID:</label>
-        <input type="text" id="<?php echo esc_attr( $this->meta_key ); ?>-id" name="<?php echo esc_attr( $this->meta_key ); ?>[id]" value="<?php echo esc_attr( $values['id'] ); ?>" class="widefat" />
+        <label for="<?php echo esc_attr( $this->meta_key ); ?>-url">Video URL:</label>
+        <input type="text" id="<?php echo esc_attr( $this->meta_key ); ?>-url" name="<?php echo esc_attr( $this->meta_key ); ?>[url]" value="<?php echo esc_attr( $values['url'] ); ?>" class="widefat" />
       </p>
       <p>
-        <label for="<?php echo esc_attr( $this->meta_key ); ?>-link">Video Link:</label>
-        <input type="text" id="<?php echo esc_attr( $this->meta_key ); ?>-link" name="<?php echo esc_attr( $this->meta_key ); ?>[link]" value="<?php echo esc_attr( $values['link'] ); ?>" class="widefat" />
-      </p>
-      <p>
-        <label for="<?php echo esc_attr( $this->meta_key ); ?>-text">Video Text:</label>
-        <input type="text" id="<?php echo esc_attr( $this->meta_key ); ?>-text" name="<?php echo esc_attr( $this->meta_key ); ?>[text]" value="<?php echo esc_attr( $values['text'] ); ?>" class="widefat" />
+        <label for="<?php echo esc_attr( $this->meta_key ); ?>-title">Video Title:</label>
+        <input type="text" id="<?php echo esc_attr( $this->meta_key ); ?>-title" name="<?php echo esc_attr( $this->meta_key ); ?>[title]" value="<?php echo esc_attr( $values['title'] ); ?>" class="widefat" />
       </p>
     </div>
     <?php
@@ -73,10 +68,14 @@ class RGNRFS_EVENT_VIDEO_META {
       $raw_data = $_POST[$this->meta_key];
 
       $sanitized_array = array(
-        'id'   => isset( $raw_data['id'] ) && !empty( $raw_data['id'] ) ? sanitize_text_field( $raw_data['id'] ) : '',
-        'link' => isset( $raw_data['link'] ) && !empty( $raw_data['link'] ) ? sanitize_text_field( $raw_data['link'] ) : '#',
-        'text' => isset( $raw_data['text'] ) && !empty( $raw_data['text'] ) ? sanitize_text_field( $raw_data['text'] ) : '',
+        'url'   => isset( $raw_data['url'] ) && !empty( $raw_data['url'] ) ? sanitize_text_field( $raw_data['url'] ) : '',
+        'title' => isset( $raw_data['title'] ) && !empty( $raw_data['title'] ) ? sanitize_text_field( $raw_data['title'] ) : ''
       );
+
+      if( empty( $sanitized_array['url'] ) ){
+        delete_post_meta( $post_id, $this->meta_key );
+        return;
+      }
 
       update_post_meta( $post_id, $this->meta_key, $sanitized_array );
     }
