@@ -16,7 +16,7 @@ class RGNRFS_SHORTCODE {
 
     $queried_obj = get_queried_object();
 
-    // FETCH DATA FROM CPT EVENTS CPT ELSE USE VALUES FROM SHORTCODE ATTS
+    // FETCH DATA FROM CPT EVENTS ELSE USE VALUES FROM SHORTCODE ATTS
     if( intval( $args['use_meta'] ) === 1 && $queried_obj && isset( $queried_obj->ID ) && isset( $queried_obj->post_type ) && 'events' === $queried_obj->post_type ){
       $meta_array  = get_post_meta( $queried_obj->ID, 'rgnrfs_event_video', true );
       $embed_url  = ( is_array( $meta_array ) && isset( $meta_array['url'] ) ) ? $meta_array['url'] : '';
