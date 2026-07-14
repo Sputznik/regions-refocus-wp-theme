@@ -593,11 +593,13 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
 }
 
 /* RELATED CONVENINGS */
-.related-convenings {
+.related-convenings,
+.related-events {
   margin: 100px 0;
 }
 
-.related-convenings .related-convenings-title {
+.related-convenings .related-convenings-title,
+.related-events .related-events-title {
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 700;

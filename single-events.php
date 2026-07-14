@@ -13,6 +13,7 @@ get_header();
         <?php the_content(); ?>
       </div>
     </div>
+    <?php get_template_part('partials/events/related-events'); ?>
   <?php endwhile; endif; ?>
 </div>
 <?php get_footer(); ?>
