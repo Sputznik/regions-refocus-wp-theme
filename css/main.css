@@ -552,12 +552,10 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
 }
 
 /* SINGLE CONVENINGS */
-.rgnrfs-single-convening,
 .rgnrfs-single-events {
   margin-top: 120px;
 }
 
-.rgnrfs-single-convening .bg-top-terrain,
 .rgnrfs-single-events .bg-top-terrain {
   height: 300px;
   width: 100%;
@@ -569,36 +567,30 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   background-size: cover;
 }
 
-.convenings-post-header,
 .events-post-header {
   margin-bottom: 20px;
 }
 
 /* CONVENINGS BREADCRUMB */
-.convenings-post-header .breadcrumb,
 .events-post-header .breadcrumb {
   font-size: 21px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.convenings-post-header .date-location,
 .events-post-header .date-location {
   font-size: 21px;
 }
 
-.convenings-post-header .date-location > p:last-of-type,
 .events-post-header .date-location > p:last-of-type {
   margin-bottom: 0;
 }
 
 /* RELATED CONVENINGS */
-.related-convenings,
 .related-events {
   margin: 100px 0;
 }
 
-.related-convenings .related-convenings-title,
 .related-events .related-events-title {
   margin-bottom: 20px;
   font-size: 21px;
@@ -1099,12 +1091,10 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   }
 
   /* SINGLE CONVENINGS */
-  .rgnrfs-single-convening,
   .rgnrfs-single-events {
     margin-top: 180px;
   }
 
-  .convenings-post-header .date-location,
   .events-post-header .date-location {
     align-self: flex-end;
   }
