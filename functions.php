@@ -19,7 +19,6 @@ $inc_files = array(
   'lib/customize-theme/customize-theme.php',
   'lib/wp-bootstrap-navwalker.php',
   'lib/rgnrfs-hooks/rgnrfs-action-hooks.php',
-  'lib/class-rgnrfs-convenings-cpt.php',
   'lib/rgnrfs-cpt-events/rgnrfs-cpt-events.php',
   'lib/class-rgnrfs-outcomes-cpt.php',
   'lib/class-rgnrfs-regions-taxonomy.php',
