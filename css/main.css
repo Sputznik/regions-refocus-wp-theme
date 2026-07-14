@@ -1075,6 +1075,26 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   letter-spacing: 5px;
 }
 
+/* RGNRFS VIDEO EMBED SHORTCODE */
+.rgnrfs-video-embed-sc {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.rgnrfs-video-embed-sc iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.rgnrfs-video-embed-sc-title {
+  margin-top: 15px;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
