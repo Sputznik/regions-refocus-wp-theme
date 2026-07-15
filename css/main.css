@@ -856,7 +856,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   justify-content: space-between;
 }
 
-.rr-regions-hero .featured-convening {
+.rr-regions-hero .featured-event {
   width: 700px;
   padding: 70px;
   color: #ffffff;
@@ -868,13 +868,13 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   background-color: rgba(33, 33, 33, .8);
 }
 
-.rr-regions-hero .featured-convening a:not(.post-title-link) {
+.rr-regions-hero .featured-event a:not(.post-title-link) {
   color: #fdb500;
   text-decoration: underline;
   transition: .05s ease-in-out;
 }
 
-.rr-regions-hero .featured-convening a:hover {
+.rr-regions-hero .featured-event a:hover {
   color: #2d7990;
 }
 
@@ -890,7 +890,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   font-weight: 700;
 }
 
-.rr-regions-hero .other-convening {
+.rr-regions-hero .other-event {
   display: none;
   font-size: 17px;
   font-weight: 700;
@@ -1137,7 +1137,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   }
 
   /* SOW RR REGIONS HERO */
-  .rr-regions-hero .other-convening-lg {
+  .rr-regions-hero .other-event-lg {
     display: inline-block;
   }
 
@@ -1171,7 +1171,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
     margin-top: 120px;
   }
 
-  .rr-regions-hero .featured-convening {
+  .rr-regions-hero .featured-event {
     padding: 20px;
   }
 
@@ -1179,7 +1179,7 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
     font-size: 25px;
   }
 
-  .rr-regions-hero .other-convening-sm {
+  .rr-regions-hero .other-event-sm {
     display: inline-block;
     margin-bottom: 20px;
   }

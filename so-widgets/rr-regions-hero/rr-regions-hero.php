@@ -35,15 +35,20 @@ class SO_RGNRFS_REGIONS_HERO extends SiteOrigin_Widget {
 				),
 				'featured_post_id' => array(
 					'type'   		 => 'autocomplete',
-					'label'  		 => __( 'Search and Select Featured Convening', 'siteorigin-widgets' ),
+					'label'  		 => __( 'Search and Select Featured Event', 'siteorigin-widgets' ),
 					'source'		 => 'posts',
-					'post_types' => array('convenings'),
+					'post_types' => array('events'),
 					'multiple'	 => false
 				),
 				'co_conveners' => array(
 					'type' 	=> 'repeater',
-					'label' => __( 'CO-conveners' , 'siteorigin-widgets' ),
+					'label' => __( 'Co-conveners' , 'siteorigin-widgets' ),
 					'item_name'  => __( 'Repeater item', 'siteorigin-widgets' ),
+					'item_label' => array(
+						'selector'     => "[id*='convener_name']",
+						'update_event' => 'change',
+						'value_method' => 'val'
+					),
 					'fields' => array(
 						'convener_name' => array(
 							'type' 			=> 'text',
