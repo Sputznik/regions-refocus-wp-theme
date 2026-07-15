@@ -49,6 +49,11 @@ class SO_RGNRFS_ALLIES extends SiteOrigin_Widget {
 					'type' 	=> 'repeater',
 					'label' => __( 'Allies' , 'siteorigin-widgets' ),
 					'item_name'  => __( 'Repeater item', 'siteorigin-widgets' ),
+					'item_label' => array(
+						'selector'     => "[id*='ally_name']",
+						'update_event' => 'change',
+						'value_method' => 'val'
+					),
 					'fields' => array(
 						'ally_name' => array(
 							'type' 			=> 'text',
