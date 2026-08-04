@@ -24,6 +24,7 @@ if( $template_style == 'grid_three_card' ){
   <?php foreach( $outcome_ids as $outcome_id ):
     $outcome_title = get_the_title( $outcome_id );
     $resource_url  = get_post_meta( $outcome_id, 'rgnrfs_resource_url', true );
+    $resource_type = get_post_meta( $outcome_id, 'rgnrfs_resource_type', true );
   ?>
     <?php if( $template_style == 'grid_three_card' ): $regions_list = get_the_term_list( $outcome_id, 'regions', '', ', '); ?>
       <div class="rr-outcome-item orbit-article-db">
@@ -36,7 +37,9 @@ if( $template_style == 'grid_three_card' ){
           <?php endif; ?>
         </div>
         <div class="rr-outcome-meta font-calibre">
-          <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="rr-outcome-more font-calibre">See More</a>
+          <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="rr-outcome-more font-calibre">
+            <?php echo RGNRFS_OUTCOMES_CPT::get_resource_action_text( $resource_type ); ?>
+          </a>
           <?php if( !empty( $regions_list ) ):?>
             <div class="tax-regions-list"><?php echo $regions_list; ?></div>
           <?php endif;?>
