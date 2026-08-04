@@ -2,6 +2,10 @@
 
 class RGNRFS_OUTCOMES_CPT {
 
+public const VIDEO    = 'video';
+public const WEBLINK  = 'weblink';
+public const DOCUMENT = 'document';
+
   function __construct(){
 
     /* REGISTER CPT USING ORBIT-BUNDLE PLUGIN */
