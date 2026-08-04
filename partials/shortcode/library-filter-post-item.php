@@ -6,8 +6,8 @@ $post_type = get_post_type( $post_id );
   <div class="resource-icon">
     <?php if( $post_type === 'outcomes' ): $outcome_resource_type = get_post_meta( $post_id, 'rgnrfs_resource_type', true ); ?>
       <?php echo RGNRFS_OUTCOMES_CPT::get_resource_type_icon( $outcome_resource_type ); ?>
-    <?php elseif( $post_type === 'convenings' ): ?>
-      <?php echo RGNRFS_OUTCOMES_CPT::get_resource_type_icon('document'); ?>
+    <?php elseif( $post_type === 'events' ): ?>
+      <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
     <?php endif;?>
   </div>
   <div class="resource-content">
@@ -21,17 +21,22 @@ $post_type = get_post_type( $post_id );
       <li>
         <span class="post-type text-capitalize"><?php echo $post_type; ?></span>
       </li>
-      <?php if( $post_type === 'outcomes' ): $resource_url  = get_post_meta( $post_id, 'rgnrfs_resource_url', true ); ?>
+      <?php if( $post_type === 'outcomes' ):
+        $resource_url  = get_post_meta( $post_id, 'rgnrfs_resource_url', true );
+        $resource_type = get_post_meta( $post_id, 'rgnrfs_resource_type', true );
+      ?>
         <li>
-          <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="see-resource font-calibre">See More</a>
+          <a href="<?php echo $resource_url; ?>" target="_blank" rel="noopener noreferrer" class="see-resource font-calibre">
+            <?php echo RGNRFS_OUTCOMES_CPT::get_resource_action_text( $resource_type ); ?>
+          </a>
         </li>
         <li>
           <span class="post-date"><?php echo get_the_date( 'Y-m-d', $post_id );?></span>
         </li>
       <?php endif; ?>
-      <?php if( $post_type === 'convenings' ): $convening_date_range  = get_post_meta( $post_id, "rgnrfs_date_range", true ); ?>
+      <?php if( $post_type === 'events' ): $event_date_range = get_post_meta( $post_id, "rgnrfs_event_date_range", true ); ?>
         <li>
-          <span class="post-date"><?php echo $convening_date_range;?></span>
+          <span class="post-date"><?php echo $event_date_range;?></span>
         </li>
       <?php endif; ?>
     </ul>

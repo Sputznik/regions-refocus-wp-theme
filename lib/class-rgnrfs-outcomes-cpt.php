@@ -70,7 +70,7 @@ public const DOCUMENT = 'document';
       case self::WEBLINK:
         return '<i class="fa-solid fa-link" aria-hidden="true"></i>';
       case self::DOCUMENT:
-        return '<i class="fa-regular fa-file aria-hidden="true"></i>';
+        return '<i class="fa-regular fa-file" aria-hidden="true"></i>';
       default:
         return "";
     }
