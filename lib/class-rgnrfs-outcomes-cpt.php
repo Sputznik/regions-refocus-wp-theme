@@ -76,6 +76,19 @@ public const DOCUMENT = 'document';
     }
   }
 
+  static function get_resource_action_text( $resource_type ){
+    switch( strtolower( $resource_type ) ){
+      case self::VIDEO:
+        return 'Watch now';
+      case self::WEBLINK:
+        return 'Visit link';
+      case self::DOCUMENT:
+        return 'Open document';
+      default:
+        return "See More";
+    }
+  }
+
   function register_taxonomy( $taxonomies ){
     $taxonomies['outcome-type']	= array(
       'label'       => 'Outcome Type',
