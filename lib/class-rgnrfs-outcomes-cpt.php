@@ -51,9 +51,9 @@ public const DOCUMENT = 'document';
             'type' => 'dropdown',
             'text' => 'Resource Type',
             'options' => array(
-              'video' => 'Video',
-              'weblink' => 'Weblink',
-              'document' => 'Document'
+              self::VIDEO => 'Video',
+              self::WEBLINK => 'Weblink',
+              self::DOCUMENT => 'Document'
             )
           )
         )
@@ -64,12 +64,12 @@ public const DOCUMENT = 'document';
   }
 
   static function get_resource_type_icon( $resource_type ){
-    switch( $resource_type ){
-      case 'video':
+    switch( strtolower( $resource_type ) ){
+      case self::VIDEO:
         return '<i class="fa-solid fa-video" aria-hidden="true"></i>';
-      case 'weblink':
+      case self::WEBLINK:
         return '<i class="fa-solid fa-link" aria-hidden="true"></i>';
-      case 'document':
+      case self::DOCUMENT:
         return '<i class="fa-regular fa-file aria-hidden="true"></i>';
       default:
         return "";
