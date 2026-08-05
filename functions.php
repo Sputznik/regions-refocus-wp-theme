@@ -27,7 +27,8 @@ $inc_files = array(
   'lib/class-rgnrfs-transparent-navbar.php',
   'lib/class-rgnrfs-orbit-filter.php',
   'lib/initiatives-page-admin/class-rgnrfs-initiatives-page-admin.php',
-  'lib/class-rgnrfs-shortcode.php'
+  'lib/class-rgnrfs-shortcode.php',
+  'lib/rgnrfs-ui-tabs/class-rgnrfs-ui-tabs.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }
