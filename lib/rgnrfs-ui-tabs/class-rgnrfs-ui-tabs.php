@@ -10,8 +10,8 @@ class RGNRFS_UI_TABS {
   }
 
   function assets(){
-    wp_register_style( 'rgnrfs-tabs-css', RGNRFS_THEME_URI. '/lib/rgnrfs-ui-tabs/tabs.css', array(), time() );
-    wp_register_script( 'rgnrfs-tabs-js', RGNRFS_THEME_URI. '/lib/rgnrfs-ui-tabs/tabs.js', array('jquery'), time(), true );
+    wp_register_style( 'rgnrfs-tabs-css', RGNRFS_THEME_URI. '/lib/rgnrfs-ui-tabs/tabs.css', array(), RGNRFS_THEME_VERSION );
+    wp_register_script( 'rgnrfs-tabs-js', RGNRFS_THEME_URI. '/lib/rgnrfs-ui-tabs/tabs.js', array('jquery'), RGNRFS_THEME_VERSION, true );
   }
 
   /**
