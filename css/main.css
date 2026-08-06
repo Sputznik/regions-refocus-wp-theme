@@ -1095,6 +1095,24 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   margin-top: 15px;
 }
 
+/* CATEGORY TEMPLATE */
+body.archive main .container {
+  margin: 130px auto 50px;
+}
+
+.archive .archive-page-title {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.archive .archive-page-title::after {
+  content: "";
+  display: block;
+  max-width: 10%;
+  margin: 20px 0;
+  border-bottom: 7px solid #1a1a1a;
+}
+
 /* -------------------------- MEDIA QUERIES ------------------------- */
 @media(min-width: 769px){
   .layout-wrap {
