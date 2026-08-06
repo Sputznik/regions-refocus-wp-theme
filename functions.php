@@ -10,7 +10,7 @@ if( !defined( 'RGNRFS_THEME_URI' ) ){
 }
 
 if( !defined( 'RGNRFS_THEME_VERSION' ) ){
-  define( 'RGNRFS_THEME_VERSION', '1.0.1' );
+  define( 'RGNRFS_THEME_VERSION', time() ); // '1.0.1'
 }
 
 // INCLUDE FILES
