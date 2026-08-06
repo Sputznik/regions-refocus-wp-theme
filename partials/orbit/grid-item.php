@@ -8,7 +8,7 @@ $title          = get_the_title( $post_id );
 $image_alt      = !empty( $feat_img_id ) ? get_post_meta( $feat_img_id, '_wp_attachment_image_alt', true ) : 'Placeholder featured image for article titled '.$title;
 $image_label    = !empty( $image_alt ) ? $image_alt : 'Featured image for the article titled '.$title;
 $regions_list   = get_the_term_list( $post_id, 'regions', '', ', ');
-$convening_date_range  = get_post_meta( $post_id, "rgnrfs_date_range", true );
+$event_date_range = get_post_meta( $post_id, "rgnrfs_event_date_range", true );
 ?>
 <article class="orbit-article-db">
   <div class="featured-img">
@@ -22,7 +22,7 @@ $convening_date_range  = get_post_meta( $post_id, "rgnrfs_date_range", true );
       <?php if( !empty( $regions_list ) ):?>
         <div class="tax-regions-list rgnrfs-link-color" ><?php echo $regions_list; ?></div>
       <?php endif;?>
-      <span class="post-date"><?php echo $convening_date_range;?></span>
+      <span class="post-date"><?php echo $event_date_range;?></span>
     </div>
   </div>
 </article>
