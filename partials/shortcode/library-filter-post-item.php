@@ -37,7 +37,7 @@ if( $post_type_chip === 'outcomes' ){
           </a>
         </li>
         <li>
-          <span class="post-date"><?php echo get_the_date( 'Y-m-d', $post_id );?></span>
+          <span class="post-date"><?php echo get_the_date( 'j F Y', $post_id );?></span>
         </li>
       <?php endif; ?>
       <?php if( $post_type === 'events' ): $event_date_range = get_post_meta( $post_id, "rgnrfs_event_date_range", true ); ?>
