@@ -1,6 +1,12 @@
 <?php
 $post_id   = get_the_ID();
 $post_type = get_post_type( $post_id );
+$post_type_chip = $post_type;
+
+if( $post_type_chip === 'outcomes' ){
+  $post_type_chip = 'publication';
+}
+
 ?>
 <div class="rgnrfs-library-search-result-item rgnrfs-link-color">
   <div class="resource-icon">
@@ -19,7 +25,7 @@ $post_type = get_post_type( $post_id );
     </div>
     <ul class="post-meta list-unstyled">
       <li>
-        <span class="post-type text-capitalize"><?php echo $post_type; ?></span>
+        <span class="post-type text-capitalize"><?php echo $post_type_chip; ?></span>
       </li>
       <?php if( $post_type === 'outcomes' ):
         $resource_url  = get_post_meta( $post_id, 'rgnrfs_resource_url', true );
