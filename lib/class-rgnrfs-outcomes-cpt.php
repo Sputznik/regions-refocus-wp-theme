@@ -30,7 +30,7 @@ public const DOCUMENT = 'document';
       'taxonomies'   => array( 'category' ),
       'public'		   => true,
       'menu_icon' 	 => 'dashicons-admin-post',
-      'supports'	   => array( 'title', 'editor', 'excerpt', 'author' )
+      'supports'	   => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' )
     );
 
     return $post_types;
