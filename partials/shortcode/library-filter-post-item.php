@@ -2,6 +2,7 @@
 $post_id   = get_the_ID();
 $post_type = get_post_type( $post_id );
 $post_type_chip = $post_type;
+$post_permalink = get_the_permalink( $post_id );
 
 if( $post_type_chip === 'outcomes' ){
   $post_type_chip = 'publication';
@@ -20,7 +21,7 @@ if( $post_type_chip === 'outcomes' ){
     <h5><?php echo get_the_title( $post_id ); ?></h5>
     <div class="post-excerpt">
       <?php if( has_excerpt( $post_id ) ):?>
-        <?php echo wp_trim_words( strip_shortcodes( get_the_excerpt( $post_id ) ), 25, ' ... '.'<a href="'.get_the_permalink( $post_id ).'">See More</a>' ); ?>
+        <?php echo wp_trim_words( strip_shortcodes( get_the_excerpt( $post_id ) ), 25, ' ... '.'<a href="'.$post_permalink.'">See More</a>' ); ?>
       <?php endif; ?>
     </div>
     <ul class="post-meta list-unstyled">
@@ -47,4 +48,18 @@ if( $post_type_chip === 'outcomes' ){
       <?php endif; ?>
     </ul>
   </div>
+  <?php if( has_post_thumbnail() ): ?>
+    <div class="resource-featured-image-wrapper">
+      <div class="feat-sm">
+        <a href="<?php echo $post_permalink; ?>">
+          <?php the_post_thumbnail( array( 50, 50 ) ); ?>
+        </a>
+      </div>
+      <div class="feat-lg">
+        <a href="<?php echo $post_permalink; ?>">
+          <?php the_post_thumbnail( array( 200, 200 ) ); ?>
+        </a>
+      </div>
+    </div>
+  <?php endif; ?>
 </div>
