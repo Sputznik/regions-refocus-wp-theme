@@ -18,7 +18,7 @@ if( $post_type_chip === 'outcomes' ){
     <?php endif;?>
   </div>
   <div class="resource-content">
-    <h5><?php echo get_the_title( $post_id ); ?></h5>
+    <h5 class="post-title"><a href="<?php echo $post_permalink; ?>"><?php echo get_the_title( $post_id ); ?></a></h5>
     <div class="post-excerpt">
       <?php if( has_excerpt( $post_id ) ):?>
         <?php echo wp_trim_words( strip_shortcodes( get_the_excerpt( $post_id ) ), 25, ' ... '.'<a href="'.$post_permalink.'">See More</a>' ); ?>

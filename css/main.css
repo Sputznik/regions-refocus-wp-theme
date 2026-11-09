@@ -992,6 +992,11 @@ body:not(.rgnrfs-transparent-navbar) #site > main {
   flex-grow: 1;
 }
 
+.rgnrfs-library-search-results .post-title a {
+  color: #212529 !important;
+  text-decoration: underline;
+}
+
 .rgnrfs-library-search-results .post-meta,
 .rgnrfs-library-search-results .resource-content {
   display: flex;
